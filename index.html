@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Will You Be My Valentine?</title>
+    <meta
+      name="description"
+      content="A playful, romantic web app to ask: Will you be my Valentine?"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orbit"></div>
+    <div class="bg-orbit bg-orbit-2"></div>
+
+    <main>
+      <div class="book-stage">
+        <section class="hero">
+          <div class="hero-card">
+            <p class="tag">For the one who makes my world glow</p>
+            <p class="greeting">Hi Abhi</p>
+            <h1 id="question">Will you be my valentine?</h1>
+            <p class="subtitle">
+              I made this little universe just for you. Say yes and unlock a
+              galaxy of surprises.
+            </p>
+
+            <div class="countdown">
+              <div>
+                <span id="countdown-days">00</span>
+                <small>days</small>
+              </div>
+              <div>
+                <span id="countdown-hours">00</span>
+                <small>hours</small>
+              </div>
+              <div>
+                <span id="countdown-mins">00</span>
+                <small>mins</small>
+              </div>
+              <div>
+                <span id="countdown-secs">00</span>
+                <small>secs</small>
+              </div>
+            </div>
+
+            <div class="cta-area" id="cta-area">
+              <button id="yes-btn" class="primary-btn" type="button">Yes</button>
+              <button id="no-btn" class="secondary-btn" type="button">No</button>
+            </div>
+
+            <div id="response" class="response"></div>
+          </div>
+        </section>
+
+        <section id="second-page" class="second-page is-hidden">
+        <div class="extras">
+          <div class="glow-card">
+            <h3>Reasons I adore you</h3>
+            <p id="reason-text">Your laugh is my favorite soundtrack.</p>
+            <button id="next-reason" class="ghost-btn" type="button">
+              Another Reason
+            </button>
+          </div>
+
+          <div class="glow-card">
+            <h3>Pick our vibe</h3>
+            <div class="vibe-grid">
+              <button class="vibe-chip" data-vibe="cozy" type="button">
+                Cozy Night
+              </button>
+              <button class="vibe-chip" data-vibe="adventure" type="button">
+                Adventure Date
+              </button>
+              <button class="vibe-chip" data-vibe="glam" type="button">
+                Glam Evening
+              </button>
+              <button class="vibe-chip" data-vibe="sweet" type="button">
+                Sweet & Simple
+              </button>
+            </div>
+            <p id="vibe-response" class="vibe-response"></p>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <div class="section-title">
+            <h2>Our highlights</h2>
+            <p>Placeholders for now. We will drop the real photos later.</p>
+          </div>
+          <div class="gallery-grid">
+            <button class="photo-card" data-full="assets/1.jpeg">
+              <img src="assets/1.jpeg" alt="Photo 1" />
+            </button>
+            <button class="photo-card" data-full="assets/2.jpeg">
+              <img src="assets/2.jpeg" alt="Photo 2" />
+            </button>
+            <button class="photo-card" data-full="assets/3.jpeg">
+              <img src="assets/3.jpeg" alt="Photo 3" />
+            </button>
+            <button class="photo-card" data-full="assets/4.jpeg">
+              <img src="assets/4.jpeg" alt="Photo 4" />
+            </button>
+            <button class="photo-card" data-full="assets/5.jpeg">
+              <img src="assets/5.jpeg" alt="Photo 5" />
+            </button>
+            <button class="photo-card" data-full="assets/6.jpeg">
+              <img src="assets/6.jpeg" alt="Photo 6" />
+            </button>
+          </div>
+        </div>
+
+        <div class="surprise">
+          <div class="surprise-card">
+            <h2>Open when you say yes</h2>
+            <p>
+              A mini love letter, a date idea generator, and a promise to make
+              you smile.
+            </p>
+            <button id="open-letter" class="primary-btn" type="button">
+              Open the Love Letter
+            </button>
+            <div class="idea-box">
+              <p id="date-idea">Tap for a surprise date plan.</p>
+              <button id="new-idea" class="ghost-btn" type="button">
+                New Idea
+              </button>
+            </div>
+          </div>
+        </div>
+
+        </section>
+        <audio
+          id="bg-audio"
+          src="assets/valentine-song.mp3"
+          preload="auto"
+          loop
+          playsinline
+        ></audio>
+      </div>
+    </main>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button id="lightbox-close" class="ghost-btn" type="button">Close</button>
+      <img id="lightbox-img" src="" alt="Full size memory" />
+    </div>
+
+    <div id="letter-modal" class="letter-modal" aria-hidden="true">
+      <div class="letter-content">
+        <h3>My Love Letter</h3>
+        <p>
+          Hey love, you make ordinary moments feel like magic. I want to keep
+          choosing you, every day, in every way. Will you be my Valentine?
+        </p>
+        <p class="signature">- Yours, always</p>
+        <button id="close-letter" class="ghost-btn" type="button">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <div id="confetti" class="confetti"></div>
+    <div id="floating-hearts" class="floating-hearts"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
